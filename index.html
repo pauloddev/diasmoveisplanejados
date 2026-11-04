@@ -290,6 +290,23 @@ footer .copy{margin-top:40px;padding-top:24px;border-top:1px solid var(--line-d)
 .wpp::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--sand);animation:ring 2.4s ease-out infinite}
 @keyframes ring{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.6);opacity:0}}
 
+
+/* ===== intro do logo ===== */
+.intro{position:fixed;inset:0;z-index:300;background:var(--dark);display:grid;place-items:center;transition:opacity .8s var(--ease),visibility .8s}
+.intro.out{opacity:0;visibility:hidden}
+.intro .lg{position:relative;width:min(720px,88vw);aspect-ratio:1173/295;transition:transform .8s var(--ease)}
+.intro.out .lg{transform:scale(1.06)}
+.intro img{position:absolute;display:block;max-width:none;height:auto}
+.intro .sy{left:0;top:0;width:25.149%;opacity:0;transform:translateX(148.8%) scale(.82);animation:syIn .8s var(--ease) .15s forwards,syMove 1s cubic-bezier(.65,0,.25,1) 1.15s forwards}
+.intro .di{left:29.412%;top:33.22%;width:70.588%;opacity:0;transform:translateX(26%);animation:diIn 1s var(--ease) 1.6s forwards}
+.intro .mv{left:29.923%;top:82.034%;width:56.948%;opacity:0;animation:mvIn 1.3s ease-in-out 2.55s forwards}
+@keyframes syIn{to{opacity:1;transform:translateX(148.8%) scale(1)}}
+@keyframes syMove{from{opacity:1;transform:translateX(148.8%) scale(1)}to{opacity:1;transform:translateX(0) scale(1)}}
+@keyframes diIn{to{opacity:1;transform:none}}
+@keyframes mvIn{to{opacity:1}}
+html.intro-on,html.intro-on body{overflow:hidden}
+.intro .skip-i{position:absolute;bottom:calc(28px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--t-light-2);opacity:0;animation:mvIn .6s ease 1.2s forwards}
+@media (prefers-reduced-motion:reduce){.intro .sy,.intro .di,.intro .mv{animation:none!important;opacity:1;transform:none}}
 /* ===== responsivo ===== */
 @media (max-width:1020px){
   .nav,.hdr .cta-s{display:none}
@@ -337,6 +354,15 @@ footer .copy{margin-top:40px;padding-top:24px;border-top:1px solid var(--line-d)
 </style>
 </head>
 <body>
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="lg">
+    <img class="sy" src="assets/intro-simbolo.png" alt="" width="295" height="295">
+    <img class="di" src="assets/intro-dias.png" alt="" width="828" height="125">
+    <img class="mv" src="assets/intro-moveis.png" alt="" width="668" height="42">
+  </div>
+  <button class="skip-i" type="button">Pular</button>
+</div>
+<script>document.documentElement.classList.add('intro-on')</script>
 <a class="skip" href="#inicio">Pular para o conteúdo</a>
 <div class="progress" aria-hidden="true"></div>
 
@@ -676,9 +702,15 @@ document.querySelectorAll('.split').forEach(el=>{
 
 /* revelar ao rolar */
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14,rootMargin:'0px 0px -6% 0px'});
-document.querySelectorAll('.rv,.split,.img-rv,.cota,.steps,.g5').forEach(el=>io.observe(el));
+document.querySelectorAll('.rv,.split,.img-rv,.cota,.steps,.g5').forEach(el=>{if(!el.closest('.hero'))io.observe(el)});
 /* hero imediato */
-requestAnimationFrame(()=>document.querySelectorAll('.hero .rv,.hero .split,.hero .img-rv').forEach(el=>el.classList.add('in')));
+const heroIn=()=>document.querySelectorAll('.hero .rv,.hero .split,.hero .img-rv').forEach(el=>el.classList.add('in'));
+const intro=document.getElementById('intro');
+let introDone=false;
+const endIntro=()=>{if(introDone)return;introDone=true;intro.classList.add('out');document.documentElement.classList.remove('intro-on');setTimeout(heroIn,250);setTimeout(()=>intro.remove(),1000)};
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+setTimeout(endIntro,reduce?1200:4500);
+intro.addEventListener('click',endIntro);
 
 /* header, progresso, menu ativo, botão flutuante */
 const hdr=document.getElementById('hdr'),bar=document.querySelector('.progress'),wpp=document.querySelector('.wpp');
