@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dias Móveis Planejados | Móveis planejados em João Pessoa - PB</title>
+<meta name="description" content="Móveis planejados em João Pessoa - PB: cozinhas, quartos, salas, banheiros, escritórios e ambientes comerciais sob medida. Projeto em 3D, fabricação própria e montagem profissional. 5 estrelas no Google.">
+<meta name="theme-color" content="#111214">
+<link rel="icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<meta property="og:title" content="Dias Móveis Planejados | João Pessoa - PB">
+<meta property="og:description" content="Seu espaço. Seu estilo. Móveis feitos sob medida.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://diasmoveisplanejados.vercel.app/">
+<meta property="og:site_name" content="Dias Móveis Planejados">
+<meta property="og:image" content="https://diasmoveisplanejados.vercel.app/assets/og-capa.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Logo Dias Móveis Planejados">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://diasmoveisplanejados.vercel.app/assets/og-capa.jpg">
+<link rel="canonical" href="https://diasmoveisplanejados.vercel.app/">
+<meta property="og:locale" content="pt_BR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FurnitureStore","name":"Dias Móveis Planejados","description":"Móveis planejados e sob medida em João Pessoa - PB.","telephone":"+55 83 99935-4112","areaServed":"João Pessoa - PB e região","address":{"@type":"PostalAddress","addressLocality":"João Pessoa","addressRegion":"PB","addressCountry":"BR"},"founder":{"@type":"Person","name":"Thiago Dias"},"sameAs":["https://www.instagram.com/dias_moveisplanejadoos/"]}
+</script>
+<style>
+:root{
+  --ink:#0b0c0d;          /* preto mais fundo (rodapé) */
+  --dark:#111214;         /* preto claro — base */
+  --dark-2:#1a1c1f;       /* cartões no escuro */
+  --line-d:rgba(255,255,255,.09);
+  --sand:#deb181;         /* bege do logo */
+  --sand-2:#ecd2b3;
+  --bronze:#8a5f30;       /* bege escurecido p/ texto em fundo branco (AA) */
+  --paper:#ffffff;
+  --paper-2:#f6f3ee;
+  --line-l:rgba(32,35,38,.12);
+  --t-light:#f4f0ea;
+  --t-light-2:#b4aea5;
+  --t-dark:#202326;
+  --t-dark-2:#5c5f63;
+  --r:18px;
+  --wrap:1200px;
+  --ease:cubic-bezier(.2,.75,.2,1);
+  --head:"Outfit",system-ui,sans-serif;
+  --body:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{background:var(--dark);color:var(--t-light);font-family:var(--body);font-size:16px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--sand);outline-offset:3px;border-radius:6px}
+.wrap{width:min(var(--wrap),100% - 32px);margin-inline:auto}
+.skip{position:absolute;left:-999px;top:8px;background:var(--sand);color:var(--t-dark);padding:8px 14px;border-radius:8px;z-index:200}
+.skip:focus{left:8px}
+
+/* ===== progress ===== */
+.progress{position:fixed;inset:0 0 auto 0;height:2px;z-index:120;background:var(--sand);transform-origin:0 50%;transform:scaleX(0)}
+
+/* ===== header ===== */
+.hdr{position:fixed;inset:0 0 auto 0;z-index:100;transition:background .4s var(--ease),box-shadow .4s,padding .4s;padding:22px 0}
+.hdr.solid{background:rgba(17,18,20,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line-d);padding:12px 0}
+.hdr .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px}
+.hdr .logo img{height:38px;width:auto}
+.nav{display:flex;gap:30px}
+.nav a{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--t-light-2);position:relative;padding:6px 0;transition:color .3s}
+.nav a::after{content:"";position:absolute;left:50%;right:50%;bottom:0;height:1px;background:var(--sand);transition:left .35s var(--ease),right .35s var(--ease)}
+.nav a:hover,.nav a.on{color:var(--t-light)}
+.nav a:hover::after,.nav a.on::after{left:0;right:0}
+.hdr .cta-s{justify-self:end}
+.burger{display:none;justify-self:end;width:44px;height:44px;border-radius:50%;border:1px solid var(--line-d);position:relative}
+.burger span{position:absolute;left:13px;right:13px;height:1.5px;background:var(--t-light);transition:transform .35s var(--ease),opacity .2s}
+.burger span:nth-child(1){top:17px}.burger span:nth-child(2){top:25px}
+.menu-open .burger span:nth-child(1){transform:translateY(4px) rotate(45deg)}
+.menu-open .burger span:nth-child(2){transform:translateY(-4px) rotate(-45deg)}
+.mnav{position:fixed;inset:0;z-index:90;background:var(--dark);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+.mnav a{font-family:var(--head);font-size:28px;font-weight:300;transform:translateY(16px);opacity:0;transition:transform .5s var(--ease),opacity .5s}
+.menu-open .mnav{opacity:1;visibility:visible}
+.menu-open .mnav a{transform:none;opacity:1}
+.menu-open .mnav a:nth-child(2){transition-delay:.05s}.menu-open .mnav a:nth-child(3){transition-delay:.1s}.menu-open .mnav a:nth-child(4){transition-delay:.15s}.menu-open .mnav a:nth-child(5){transition-delay:.2s}.menu-open .mnav a:nth-child(6){transition-delay:.25s}.menu-open .mnav a:nth-child(7){transition-delay:.3s}
+
+/* ===== buttons (invertem no hover) ===== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;border:1.5px solid var(--sand);transition:background .35s var(--ease),color .35s var(--ease),border-color .35s,transform .35s var(--ease)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-p{background:var(--sand);color:var(--t-dark)}
+.btn-p:hover{background:transparent;color:var(--sand)}
+.btn-g{background:transparent;color:var(--t-light);border-color:rgba(255,255,255,.28)}
+.btn-g:hover{background:var(--t-light);color:var(--t-dark);border-color:var(--t-light)}
+.light .btn-g{color:var(--t-dark);border-color:var(--t-dark)}
+.light .btn-g:hover{background:var(--t-dark);color:var(--paper)}
+.light .btn-p{background:var(--t-dark);border-color:var(--t-dark);color:var(--paper)}
+.light .btn-p:hover{background:transparent;color:var(--t-dark)}
+.btn:active{transform:scale(.97)}
+.cta-s.btn{min-height:42px;padding:0 20px;font-size:12px}
+
+/* ===== sections ===== */
+section{position:relative;padding:clamp(80px,11vw,140px) 0}
+.light{background:var(--paper);color:var(--t-dark)}
+.light.alt{background:var(--paper-2)}
+.dark{background:var(--dark)}
+.head{text-align:center;max-width:760px;margin:0 auto clamp(44px,6vw,72px)}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--sand);margin-bottom:18px}
+.light .eyebrow{color:var(--bronze)}
+h1,h2,h3{font-family:var(--head);font-weight:400;line-height:1.08;letter-spacing:-.02em}
+h2{font-size:clamp(32px,4.6vw,56px)}
+h2 em,h1 em{font-style:normal;color:var(--sand)}
+.light h2 em{color:var(--bronze)}
+.lead{font-size:clamp(16px,1.5vw,18px);color:var(--t-light-2);margin-top:20px}
+.light .lead{color:var(--t-dark-2)}
+
+/* cota — linha de medida simétrica (assinatura visual) */
+.cota{display:flex;align-items:center;justify-content:center;gap:14px;margin:26px auto 0;width:min(340px,80%);color:var(--sand);font-size:11px;letter-spacing:.3em;text-transform:uppercase}
+.light .cota{color:var(--bronze)}
+.cota i{flex:1;height:1px;background:currentColor;position:relative;transform:scaleX(0);transition:transform 1.1s var(--ease) .2s}
+.cota i:first-child{transform-origin:100% 50%}.cota i:last-child{transform-origin:0 50%}
+.cota i::before{content:"";position:absolute;top:-5px;width:1px;height:11px;background:currentColor}
+.cota i:first-child::before{left:0}.cota i:last-child::before{right:0}
+.cota b{font-weight:600;opacity:0;transition:opacity .6s .5s}
+.in .cota i,.cota.in i{transform:scaleX(1)}
+.in .cota b,.cota.in b{opacity:1}
+
+/* ===== reveal / transições ===== */
+.rv{opacity:0;transform:translateY(34px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.split .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.split .w>span{display:inline-block;transform:translateY(105%);transition:transform 1s var(--ease);transition-delay:calc(var(--i)*55ms + var(--d,0s))}
+.split.in .w>span{transform:none}
+.img-rv{overflow:hidden;clip-path:inset(12% 12% 12% 12% round var(--r));transition:clip-path 1.3s var(--ease);transition-delay:var(--d,0s)}
+.img-rv img,.img-rv video{transform:scale(1.18);transition:transform 1.8s var(--ease);transition-delay:var(--d,0s)}
+.img-rv.in{clip-path:inset(0 0 0 0 round var(--r))}
+.img-rv.in img,.img-rv.in video{transform:scale(1)}
+
+/* ===== HERO ===== */
+.hero{min-height:100svh;padding:140px 0 70px;display:flex;align-items:center;overflow:hidden;background:var(--dark)}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.028) 0 2px,transparent 2px 46px);mask-image:linear-gradient(180deg,#000,transparent 85%);-webkit-mask-image:linear-gradient(180deg,#000,transparent 85%);pointer-events:none}
+.hero::after{content:"";position:absolute;left:50%;top:-20%;width:900px;height:900px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(222,177,129,.13),transparent);pointer-events:none}
+.hero .wrap{position:relative;z-index:1;text-align:center}
+.stars{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 12px;border:1px solid var(--line-d);border-radius:999px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--t-light-2);transition:border-color .3s,color .3s}
+.stars:hover{border-color:var(--sand);color:var(--t-light)}
+.stars .st{display:flex;gap:2px;color:var(--sand)}
+.stars svg{width:13px;height:13px}
+.hero h1{font-size:clamp(40px,7vw,92px);font-weight:300;margin:26px auto 0;max-width:17ch}
+.hero h1 strong{font-weight:500}
+.hero .lead{max-width:600px;margin-inline:auto}
+.hero .acts{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:36px}
+.tri{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:clamp(12px,2vw,24px);align-items:center;margin-top:clamp(56px,7vw,84px)}
+.tri figure{aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;position:relative;background:var(--dark-2)}
+.tri figure img,.tri figure video{width:100%;height:100%;object-fit:cover}
+.tri .side{transform:translateY(40px)}
+.tri figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 16px;background:linear-gradient(transparent,rgba(20,22,24,.75));font-size:11px;letter-spacing:.24em;text-transform:uppercase;text-align:center}
+.scroll-hint{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:56px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--t-light-2)}
+.scroll-hint i{width:1px;height:46px;background:linear-gradient(var(--sand),transparent);animation:drop 2.2s var(--ease) infinite;transform-origin:top}
+@keyframes drop{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* ===== split 50/50 ===== */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,88px);align-items:center}
+.duo figure{aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;background:var(--paper-2)}
+.dark .duo figure{background:var(--dark-2)}
+.duo figure img,.duo figure video{width:100%;height:100%;object-fit:cover}
+.duo .txt h2{font-size:clamp(30px,3.8vw,48px)}
+.duo .txt .cota{margin:24px 0 0;justify-content:flex-start;width:220px}
+.duo .txt p{margin-top:20px;color:var(--t-light-2);font-size:17px}
+.light .duo .txt p{color:var(--t-dark-2)}
+.quote{margin-top:30px;padding:26px 28px;border-left:2px solid var(--sand);background:rgba(222,177,129,.08);border-radius:0 12px 12px 0;font-family:var(--head);font-size:clamp(18px,1.8vw,21px);font-weight:300;line-height:1.5}
+.light .quote{background:var(--paper-2);border-color:var(--bronze);color:var(--t-dark)}
+.quote small{display:block;margin-top:14px;font-family:var(--body);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze);font-weight:700}
+.dark .quote small{color:var(--sand)}
+.ticks{list-style:none;margin-top:26px;display:grid;gap:12px}
+.ticks li{display:flex;gap:12px;align-items:flex-start;font-weight:500}
+.ticks li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:var(--sand) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23202326' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/12px no-repeat}
+.duo .acts{margin-top:34px;display:flex;gap:12px;flex-wrap:wrap}
+
+/* ===== diferenciais ===== */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{padding:36px 30px;border-radius:var(--r);background:var(--dark-2);border:1px solid var(--line-d);text-align:center;transition:transform .5s var(--ease),border-color .4s,background .4s}
+.card:hover{transform:translateY(-6px);border-color:rgba(222,177,129,.45)}
+.card .ico{width:58px;height:58px;margin:0 auto 22px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(222,177,129,.4);color:var(--sand);transition:background .4s,color .4s}
+.card:hover .ico{background:var(--sand);color:var(--t-dark)}
+.card .ico svg{width:26px;height:26px}
+.card .n{display:block;font-size:11px;letter-spacing:.3em;color:var(--t-light-2);margin-bottom:8px}
+.card h3{font-size:22px;font-weight:500}
+.card p{margin-top:10px;font-size:15px;color:var(--t-light-2)}
+
+/* ===== ambientes ===== */
+.amb{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.amb a{position:relative;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;display:block;background:var(--paper-2);isolation:isolate}
+.amb img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.amb a::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(24,26,29,.82));z-index:1;transition:opacity .5s}
+.amb .lb{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:24px;text-align:center;color:var(--t-light)}
+.amb .lb h3{font-size:24px;font-weight:500}
+.amb .lb span{display:inline-flex;align-items:center;gap:8px;margin-top:8px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--sand);opacity:0;transform:translateY(8px);transition:opacity .45s,transform .45s var(--ease)}
+.amb a:hover img{transform:scale(1.07)}
+.amb a:hover .lb span,.amb a:focus-visible .lb span{opacity:1;transform:none}
+
+/* ===== motivos (simétrico: 3 | imagem | 3) ===== */
+.mot{display:grid;grid-template-columns:1fr minmax(260px,400px) 1fr;gap:clamp(24px,4vw,56px);align-items:center}
+.mot ol{list-style:none;display:grid;gap:clamp(26px,3.4vw,44px)}
+.mot li{display:grid;gap:6px}
+.mot .l li{text-align:right}
+.mot li .k{font-family:var(--head);font-size:40px;font-weight:300;line-height:1;color:var(--bronze)}
+.mot li h3{font-size:21px;font-weight:500}
+.mot li p{font-size:15px;color:var(--t-dark-2)}
+.mot figure{aspect-ratio:4/5;border-radius:200px 200px var(--r) var(--r);overflow:hidden}
+.mot figure img{width:100%;height:100%;object-fit:cover}
+.mot .img-rv{clip-path:inset(12% 12% 12% 12% round 200px 200px var(--r) var(--r))}
+.mot .img-rv.in{clip-path:inset(0 round 200px 200px var(--r) var(--r))}
+
+/* ===== portfólio ===== */
+.port{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.port button{position:relative;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:var(--paper-2)}
+.port img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease),filter .6s}
+.port button::after{content:"";position:absolute;inset:0;background:rgba(32,35,38,.35) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23deb181' stroke-width='1.6' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-3.5-3.5M11 8v6M8 11h6'/%3E%3C/svg%3E") center/38px no-repeat;opacity:0;transition:opacity .4s}
+.port button:hover img{transform:scale(1.06)}
+.port button:hover::after,.port button:focus-visible::after{opacity:1}
+.center-act{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:clamp(40px,5vw,56px)}
+
+/* lightbox */
+.lbx{position:fixed;inset:0;z-index:150;background:rgba(20,22,24,.95);display:grid;place-items:center;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s;padding:20px}
+.lbx.open{opacity:1;visibility:visible}
+.lbx img{max-height:86svh;max-width:min(92vw,700px);border-radius:14px;transform:scale(.94);transition:transform .5s var(--ease)}
+.lbx.open img{transform:none}
+.lbx .x,.lbx .pv,.lbx .nx{position:absolute;width:52px;height:52px;border-radius:50%;border:1px solid var(--line-d);display:grid;place-items:center;color:var(--t-light);background:rgba(36,39,43,.7);transition:background .3s,color .3s}
+.lbx .x:hover,.lbx .pv:hover,.lbx .nx:hover{background:var(--sand);color:var(--t-dark)}
+.lbx .x{top:20px;right:20px}.lbx .pv{left:20px;top:50%;margin-top:-26px}.lbx .nx{right:20px;top:50%;margin-top:-26px}
+.lbx svg{width:22px;height:22px}
+
+/* ===== carrossel de vídeos ===== */
+.vc{position:relative;overflow:hidden;height:clamp(420px,46vw,560px);touch-action:pan-y;user-select:none}
+.vc .it{position:absolute;left:50%;top:50%;width:clamp(230px,24vw,330px);aspect-ratio:4/5;margin-left:calc(clamp(230px,24vw,330px)/-2);border-radius:var(--r);overflow:hidden;background:var(--dark-2);transition:transform .8s var(--ease),opacity .8s var(--ease),filter .8s,box-shadow .8s;transform:translateY(-50%) translateX(calc(var(--o)*78%)) scale(var(--s));opacity:var(--op);filter:saturate(var(--sat)) brightness(var(--br));z-index:var(--z);cursor:pointer}
+.vc .it video{width:100%;height:100%;object-fit:cover;pointer-events:none}
+.vc .it.act{box-shadow:0 30px 80px -20px rgba(0,0,0,.7),0 0 0 1.5px var(--sand);cursor:default}
+.vc .it .tag{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);padding:6px 12px;border-radius:999px;background:rgba(32,35,38,.7);backdrop-filter:blur(6px);font-size:10px;letter-spacing:.24em;text-transform:uppercase;white-space:nowrap;opacity:0;transition:opacity .5s}
+.vc .it.act .tag{opacity:1}
+.vc-ctrl{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:34px}
+.vc-ctrl .ar{width:52px;height:52px;border-radius:50%;border:1px solid rgba(222,177,129,.5);display:grid;place-items:center;color:var(--sand);transition:background .3s,color .3s}
+.vc-ctrl .ar:hover{background:var(--sand);color:var(--t-dark)}
+.vc-ctrl .ar svg{width:20px;height:20px}
+.dots{display:flex;gap:8px}
+.dots button{width:8px;height:8px;border-radius:99px;background:rgba(255,255,255,.22);transition:width .4s var(--ease),background .4s}
+.dots button.on{width:28px;background:var(--sand)}
+
+/* ===== processo ===== */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative}
+.steps::before{content:"";position:absolute;left:12.5%;right:12.5%;top:33px;height:1px;background:rgba(222,177,129,.45);transform:scaleX(0);transition:transform 1.6s var(--ease) .3s}
+.steps.in::before{transform:scaleX(1)}
+.step{text-align:center;position:relative}
+.step .b{width:66px;height:66px;margin:0 auto 22px;border-radius:50%;background:var(--dark);border:1px solid var(--sand);display:grid;place-items:center;font-family:var(--head);font-size:22px;color:var(--sand);position:relative;z-index:1}
+.step h3{font-size:20px;font-weight:500}
+.step p{margin-top:8px;font-size:15px;color:var(--t-light-2);max-width:250px;margin-inline:auto}
+
+/* ===== google ===== */
+.g5{text-align:center}
+.g5 .big{display:flex;justify-content:center;gap:8px;color:var(--bronze);margin-bottom:22px}
+.g5 .big svg{width:clamp(30px,4vw,44px);height:clamp(30px,4vw,44px);opacity:0;transform:scale(.4) rotate(-30deg);transition:opacity .5s,transform .7s cubic-bezier(.3,1.6,.5,1)}
+.g5.in .big svg{opacity:1;transform:none}
+.g5.in .big svg:nth-child(2){transition-delay:.1s}.g5.in .big svg:nth-child(3){transition-delay:.2s}.g5.in .big svg:nth-child(4){transition-delay:.3s}.g5.in .big svg:nth-child(5){transition-delay:.4s}
+
+/* ===== CTA final ===== */
+.final{text-align:center;overflow:hidden}
+.final::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 2px,transparent 2px 46px);pointer-events:none}
+.final .sym{width:84px;margin:0 auto 30px;opacity:.95}
+.final h2{font-size:clamp(38px,6vw,78px);font-weight:300}
+.final .lead{max-width:620px;margin-inline:auto}
+.final .acts{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:40px}
+
+/* ===== footer ===== */
+footer{background:var(--ink);padding:70px 0 34px;text-align:center}
+footer .lg{height:130px;width:auto;margin:0 auto}
+footer .slogan{margin-top:22px;font-family:var(--head);font-size:20px;font-weight:300;color:var(--t-light-2)}
+footer .soc{display:flex;justify-content:center;gap:14px;margin-top:28px}
+footer .soc a{width:48px;height:48px;border-radius:50%;border:1px solid var(--line-d);display:grid;place-items:center;color:var(--sand);transition:background .3s,color .3s,border-color .3s}
+footer .soc a:hover{background:var(--sand);color:var(--t-dark);border-color:var(--sand)}
+footer .soc svg{width:20px;height:20px}
+footer .meta{display:flex;justify-content:center;gap:10px 28px;flex-wrap:wrap;margin-top:28px;font-size:14px;color:var(--t-light-2)}
+footer .meta a:hover{color:var(--sand)}
+footer .copy{margin-top:40px;padding-top:24px;border-top:1px solid var(--line-d);font-size:12px;letter-spacing:.08em;color:#7d7870}
+
+/* whatsapp flutuante */
+.wpp{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom));z-index:95;width:60px;height:60px;border-radius:50%;background:var(--sand);color:var(--t-dark);display:grid;place-items:center;box-shadow:0 14px 34px -8px rgba(0,0,0,.55);transition:transform .4s var(--ease),background .3s;transform:scale(0)}
+.wpp.show{transform:scale(1)}
+.wpp:hover{background:#fff}
+.wpp svg{width:30px;height:30px}
+.wpp::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--sand);animation:ring 2.4s ease-out infinite}
+@keyframes ring{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.6);opacity:0}}
+
+/* ===== responsivo ===== */
+@media (max-width:1020px){
+  .nav,.hdr .cta-s{display:none}
+  .burger{display:block}
+  .hdr .wrap{grid-template-columns:1fr auto}
+  .grid3,.amb{grid-template-columns:repeat(2,1fr)}
+  .port{grid-template-columns:repeat(3,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr);row-gap:44px}
+  .steps::before{display:none}
+  .mot{grid-template-columns:1fr;max-width:560px;margin-inline:auto}
+  .mot figure{order:-1;max-width:360px;width:100%;margin-inline:auto}
+  .mot .l li,.mot .r li{text-align:center}
+}
+@media (max-width:760px){
+  .duo{grid-template-columns:1fr}
+  .duo.rev figure{order:-1}
+  .duo .txt{text-align:center}
+  .duo .txt .cota{margin-inline:auto}
+  .duo .acts{justify-content:center}
+  .quote{text-align:left}
+  .ticks{width:fit-content;margin-inline:auto;text-align:left}
+  .tri{grid-template-columns:1fr;max-width:340px;margin-inline:auto}
+  .tri .side{display:none}
+  .port{grid-template-columns:repeat(2,1fr);gap:10px}
+  .vc .it{--w:min(66vw,300px);width:var(--w);margin-left:calc(var(--w)/-2)}
+  .vc{height:min(100vw,440px)}
+}
+@media (max-width:560px){
+  .grid3{grid-template-columns:1fr}
+  .amb{grid-template-columns:1fr 1fr;gap:10px}
+  .amb .lb{padding:14px 10px}
+  .amb .lb h3{font-size:17px}
+  .amb .lb span{display:none}
+  .steps{grid-template-columns:1fr}
+  .hero .acts .btn,.final .acts .btn{width:100%}
+  .hdr .logo img{height:30px}
+  footer .lg{height:104px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important}
+  .rv,.split .w>span{opacity:1;transform:none}
+  .img-rv{clip-path:none}.img-rv img,.img-rv video{transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#inicio">Pular para o conteúdo</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a href="#inicio" class="logo" aria-label="Dias Móveis Planejados — início"><img src="assets/logo-h-light.png" alt="Dias Móveis Planejados" width="1132" height="290"></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#ambientes">Ambientes</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#videos">Vídeos</a>
+      <a href="#thiago">Thiago Dias</a>
+    </nav>
+    <a class="btn btn-p cta-s" data-wa="Olá, Dias Móveis! Vim pelo site e quero solicitar um orçamento." href="#">Orçamento</a>
+    <button class="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mnav" aria-label="Menu mobile">
+  <a href="#sobre">Sobre</a>
+  <a href="#ambientes">Ambientes</a>
+  <a href="#motivos">6 motivos</a>
+  <a href="#portfolio">Portfólio</a>
+  <a href="#videos">Vídeos</a>
+  <a href="#thiago">Thiago Dias</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<main>
+<!-- 01 HERO -->
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <a class="stars rv" href="https://www.google.com/search?q=dias+m%C3%B3veis+planejados+jo%C3%A3o+pessoa" target="_blank" rel="noopener">
+      <span class="st" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg></span>
+      5 estrelas no Google
+    </a>
+    <h1 class="split">Seu espaço. Seu estilo. <strong><em>Móveis feitos sob&nbsp;medida.</em></strong></h1>
+    <p class="lead rv" style="--d:.5s">Projetos exclusivos que unem design, funcionalidade e qualidade para transformar cada ambiente. Móveis planejados em João Pessoa – PB e região.</p>
+    <div class="acts rv" style="--d:.65s">
+      <a class="btn btn-p" data-wa="Olá, Dias Móveis! Vim pelo site e quero solicitar um orçamento." href="#">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg>
+        Solicite seu orçamento</a>
+      <a class="btn btn-g" href="#portfolio">Conheça nossos projetos</a>
+    </div>
+    <div class="tri">
+      <figure class="side img-rv" style="--d:.35s"><img src="assets/fotos/p21.webp" alt="Cozinha compacta com divisória ripada em madeira iluminada" width="1200" height="1500"><figcaption>Cozinhas</figcaption></figure>
+      <figure class="img-rv" style="--d:.2s"><video src="assets/videos/principal.mp4" poster="assets/videos/principal.webp" autoplay muted loop playsinline preload="auto" aria-label="Vídeo de uma cozinha planejada pela Dias"></video></figure>
+      <figure class="side img-rv" style="--d:.45s"><img src="assets/fotos/p00.webp" alt="Estante ripada em madeira com nichos iluminados" width="1200" height="1500"><figcaption>Salas e painéis</figcaption></figure>
+    </div>
+    <div class="scroll-hint" aria-hidden="true"><i></i>Role</div>
+  </div>
+</section>
+
+<!-- 02 APRESENTAÇÃO -->
+<section class="light" id="sobre">
+  <div class="wrap duo">
+    <figure class="img-rv"><img src="assets/fotos/p23.webp" alt="Painel ripado com rack suspenso em ambiente integrado" loading="lazy" width="1012" height="1264"></figure>
+    <div class="txt">
+      <span class="eyebrow rv">Dias Móveis Planejados</span>
+      <h2 class="split">Cada detalhe pensado para <em>transformar seu ambiente.</em></h2>
+      <div class="cota" aria-hidden="true"><i></i><b>sob medida</b><i></i></div>
+      <p class="rv" style="--d:.2s">Na Dias Móveis Planejados, acreditamos que cada ambiente merece um projeto único. Desenvolvemos móveis personalizados que combinam com seu estilo, valorizam seu espaço e tornam sua casa ainda mais especial.</p>
+      <blockquote class="quote rv" style="--d:.3s">Cada detalhe pensado, cada acabamento feito com cuidado e, acima de tudo, o compromisso de entregar qualidade para cada cliente.<small>Seu projeto, do seu jeito.</small></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- 03 DIFERENCIAIS -->
+<section class="dark" id="diferenciais">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow rv">Diferenciais</span>
+      <h2 class="split">Muito mais que móveis. <em>Projetos pensados para você.</em></h2>
+      <div class="cota" aria-hidden="true"><i></i><b>06</b><i></i></div>
+    </div>
+    <div class="grid3">
+      <article class="card rv" style="--d:0s"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></div><span class="n">01</span><h3>Projetos personalizados</h3><p>Desenhados a partir da sua rotina, do seu gosto e das medidas reais do ambiente.</p></article>
+      <article class="card rv" style="--d:.08s"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l14-14 4 4-14 14H3z"/><path d="M14 6l4 4M7 13l1.5 1.5M10 10l1.5 1.5"/></svg></div><span class="n">02</span><h3>Fabricação sob medida</h3><p>Cada peça produzida no tamanho exato, sem sobras, sem improvisos.</p></article>
+      <article class="card rv" style="--d:.16s"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16"/></svg></div><span class="n">03</span><h3>Qualidade nos materiais</h3><p>Chapas, ferragens e acabamentos escolhidos para durar no uso do dia a dia.</p></article>
+      <article class="card rv" style="--d:.24s"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.8z"/></svg></div><span class="n">04</span><h3>Acabamento cuidadoso</h3><p>Fitas, encaixes e alinhamentos revisados até ficarem impecáveis.</p></article>
+      <article class="card rv" style="--d:.32s"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 12h8V4M12 12v8M12 12h8"/></svg></div><span class="n">05</span><h3>Aproveitamento inteligente</h3><p>Cantos, alturas e nichos pensados para ganhar espaço de verdade.</p></article>
+      <article class="card rv" style="--d:.4s"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div><span class="n">06</span><h3>Montagem profissional</h3><p>Equipe própria, instalação limpa e ajuste fino em cada porta e gaveta.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 04 AMBIENTES -->
+<section class="light" id="ambientes">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow rv">Ambientes</span>
+      <h2 class="split">O ambiente dos seus sonhos começa com <em>um bom projeto.</em></h2>
+      <div class="cota" aria-hidden="true"><i></i><b>residencial · comercial</b><i></i></div>
+    </div>
+    <div class="amb">
+      <a class="img-rv" style="--d:0s" data-wa="Olá! Quero um orçamento para cozinha planejada." href="#"><img src="assets/fotos/p22.webp" alt="Cozinha planejada com bancada americana em madeira e pendentes" loading="lazy" width="1200" height="1500"><div class="lb"><h3>Cozinhas planejadas</h3><span>Quero a minha →</span></div></a>
+      <a class="img-rv" style="--d:.1s" data-wa="Olá! Quero um orçamento para quarto / guarda-roupa planejado." href="#"><img src="assets/fotos/p07.webp" alt="Guarda-roupa de canto planejado com estante em madeira" loading="lazy" width="1200" height="1500"><div class="lb"><h3>Quartos e guarda-roupas</h3><span>Quero o meu →</span></div></a>
+      <a class="img-rv" style="--d:.2s" data-wa="Olá! Quero um orçamento para sala / painel planejado." href="#"><img src="assets/fotos/p24.webp" alt="Painel de TV com ripado em madeira e rack suspenso" loading="lazy" width="1200" height="1500"><div class="lb"><h3>Salas e painéis</h3><span>Quero o meu →</span></div></a>
+      <a class="img-rv" style="--d:0s" data-wa="Olá! Quero um orçamento para banheiro planejado." href="#"><img src="assets/fotos/p18.webp" alt="Gabinete de banheiro planejado com bancada preta e cuba" loading="lazy" width="1019" height="1273"><div class="lb"><h3>Banheiros</h3><span>Quero o meu →</span></div></a>
+      <a class="img-rv" style="--d:.1s" data-wa="Olá! Quero um orçamento para escritório planejado." href="#"><img src="assets/fotos/p03.webp" alt="Escritório com bancada contínua de trabalho e prateleira" loading="lazy" width="1200" height="1500"><div class="lb"><h3>Escritórios</h3><span>Quero o meu →</span></div></a>
+      <a class="img-rv" style="--d:.2s" data-wa="Olá! Quero um orçamento para ambiente comercial." href="#"><img src="assets/fotos/p02.webp" alt="Sala de reunião com mesa planejada e painéis em madeira" loading="lazy" width="1200" height="1500"><div class="lb"><h3>Ambientes comerciais</h3><span>Quero o meu →</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- 05 QUALIDADE (vídeo principal) -->
+<section class="dark" id="qualidade">
+  <div class="wrap duo">
+    <figure class="img-rv"><img src="assets/fotos/p20.webp" alt="Cozinha com nicho iluminado em LED, armários fendi e divisória em madeira" loading="lazy" width="1200" height="1500"></figure>
+    <div class="txt">
+      <span class="eyebrow rv">Qualidade</span>
+      <h2 class="split">Beleza que encanta. <em>Qualidade que faz a diferença.</em></h2>
+      <div class="cota" aria-hidden="true"><i></i><b>acabamento</b><i></i></div>
+      <p class="rv" style="--d:.2s">Cada projeto é desenvolvido com atenção aos detalhes, buscando unir durabilidade, estética e funcionalidade em cada peça. Nosso compromisso é entregar ambientes que superem expectativas.</p>
+      <ul class="ticks rv" style="--d:.3s"><li>Iluminação em LED integrada ao projeto</li><li>Ferragens e puxadores escolhidos com você</li><li>Alinhamento e acabamento revisados na entrega</li></ul>
+      <div class="acts rv" style="--d:.4s"><a class="btn btn-p" data-wa="Olá, Dias Móveis! Quero um projeto com esse padrão de acabamento." href="#">Quero esse padrão</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 6 MOTIVOS -->
+<section class="light alt" id="motivos">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow rv">Por que planejar?</span>
+      <h2 class="split">6 motivos <em>para planejar</em> os seus móveis</h2>
+      <div class="cota" aria-hidden="true"><i></i><b>3 + 3</b><i></i></div>
+    </div>
+    <div class="mot">
+      <ol class="l">
+        <li class="rv"><span class="k">01</span><h3>Economia de espaço</h3><p>Cada centímetro vira armazenamento útil.</p></li>
+        <li class="rv" style="--d:.1s"><span class="k">02</span><h3>Padronização dos móveis</h3><p>Cores, linhas e acabamentos conversando entre si.</p></li>
+        <li class="rv" style="--d:.2s"><span class="k">03</span><h3>Design de móveis exclusivos</h3><p>Peças que só existem na sua casa.</p></li>
+      </ol>
+      <figure class="img-rv"><img src="assets/fotos/p12.webp" alt="Cozinha planejada verde com armários superiores amadeirados e LED" loading="lazy" width="1200" height="1500"></figure>
+      <ol class="r">
+        <li class="rv"><span class="k">04</span><h3>Projetos de móveis em 3D</h3><p>Você vê o ambiente pronto antes de fabricar.</p></li>
+        <li class="rv" style="--d:.1s"><span class="k">05</span><h3>Para integrar ambientes</h3><p>Cozinha, sala e lavanderia em harmonia.</p></li>
+        <li class="rv" style="--d:.2s"><span class="k">06</span><h3>Otimizar espaços pequenos</h3><p>Apartamentos compactos com tudo no lugar.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 07 PERSONALIZAÇÃO -->
+<section class="dark" id="personalizacao">
+  <div class="wrap duo rev">
+    <div class="txt">
+      <span class="eyebrow rv">Personalização</span>
+      <h2 class="split">Seu estilo, suas escolhas, <em>seu projeto.</em></h2>
+      <div class="cota" aria-hidden="true"><i></i><b>do seu jeito</b><i></i></div>
+      <p class="rv" style="--d:.2s">Nada de soluções genéricas. Cada móvel é planejado de acordo com suas preferências, necessidades e dimensões do ambiente.</p>
+      <ul class="ticks rv" style="--d:.3s"><li>Você escolhe cores, texturas e padrões de madeira</li><li>Nichos, gavetas e divisões no tamanho da sua rotina</li><li>Projeto em 3D para aprovar antes da fabricação</li></ul>
+      <div class="acts rv" style="--d:.4s"><a class="btn btn-p" data-wa="Olá, Dias Móveis! Quero montar um projeto personalizado." href="#">Montar meu projeto</a></div>
+    </div>
+    <figure class="img-rv"><img src="assets/fotos/p16.webp" alt="Estante planejada com nichos assimétricos e portas basculantes" loading="lazy" width="1200" height="1500"></figure>
+  </div>
+</section>
+
+<!-- 08 PORTFÓLIO -->
+<section class="light" id="portfolio">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow rv">Projetos entregues</span>
+      <h2 class="split">Portfólio</h2>
+      <div class="cota" aria-hidden="true"><i></i><b>João Pessoa · PB</b><i></i></div>
+      <p class="lead rv" style="--d:.2s">Ambientes reais, fotografados depois da montagem. Toque em uma foto para ampliar.</p>
+    </div>
+    <div class="port">
+      <button class="img-rv" style="--d:0s"><img src="assets/fotos/p13.webp" alt="Cristaleira com portas de vidro fumê" loading="lazy"></button>
+      <button class="img-rv" style="--d:.06s"><img src="assets/fotos/p17.webp" alt="Guarda-roupa de portas de correr e penteadeira suspensa" loading="lazy"></button>
+      <button class="img-rv" style="--d:.12s"><img src="assets/fotos/p19.webp" alt="Painel marmorizado de pé-direito duplo para TV" loading="lazy"></button>
+      <button class="img-rv" style="--d:.18s"><img src="assets/fotos/p08.webp" alt="Quarto com bancada sob a janela e gaveteiro" loading="lazy"></button>
+      <button class="img-rv" style="--d:0s"><img src="assets/fotos/p09.webp" alt="Quarto de casal com guarda-roupa e cabeceira iluminada" loading="lazy"></button>
+      <button class="img-rv" style="--d:.06s"><img src="assets/fotos/p14.webp" alt="Painel grafite com escrivaninha e rack" loading="lazy"></button>
+      <button class="img-rv" style="--d:.12s"><img src="assets/fotos/p06.webp" alt="Banheiro com gabinete branco e bancada em granito" loading="lazy"></button>
+      <button class="img-rv" style="--d:.18s"><img src="assets/fotos/p04.webp" alt="Sala de reunião corporativa com mesa e colunas em madeira" loading="lazy"></button>
+      <button class="img-rv" style="--d:0s"><img src="assets/fotos/p05.webp" alt="Bancada de trabalho contínua com prateleira longa" loading="lazy"></button>
+      <button class="img-rv" style="--d:.06s"><img src="assets/fotos/p11.webp" alt="Lavanderia planejada com armários verdes" loading="lazy"></button>
+      <button class="img-rv" style="--d:.12s"><img src="assets/fotos/p10.webp" alt="Coluna amadeirada integrando cozinha e lavanderia verde" loading="lazy"></button>
+      <button class="img-rv" style="--d:.18s"><img src="assets/fotos/p01.webp" alt="Cozinha grafite com LED sob os armários e bancada americana" loading="lazy"></button>
+    </div>
+    <div class="center-act rv"><a class="btn btn-p" href="https://www.instagram.com/dias_moveisplanejadoos/" target="_blank" rel="noopener">Ver mais no Instagram</a></div>
+  </div>
+</section>
+
+<!-- 09 VÍDEOS -->
+<section class="dark" id="videos">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow rv">Na prática</span>
+      <h2 class="split">Do projeto <em>à entrega.</em></h2>
+      <div class="cota" aria-hidden="true"><i></i><b>vídeos</b><i></i></div>
+      <p class="lead rv" style="--d:.2s">Montagens, detalhes e ambientes prontos — direto das obras da Dias.</p>
+    </div>
+  </div>
+  <div class="vc rv" id="vc" aria-roledescription="carrossel" aria-label="Vídeos de projetos">
+    <div class="it"><video src="assets/videos/v1.mp4" poster="assets/videos/v1.webp" muted loop playsinline preload="none"></video><span class="tag">Lavanderia e cozinha</span></div>
+    <div class="it"><video src="assets/videos/v2.mp4" poster="assets/videos/v2.webp" muted loop playsinline preload="none"></video><span class="tag">Closet planejado</span></div>
+    <div class="it"><video src="assets/videos/v3.mp4" poster="assets/videos/v3.webp" muted loop playsinline preload="none"></video><span class="tag">Montagem na obra</span></div>
+    <div class="it"><video src="assets/videos/v4.mp4" poster="assets/videos/v4.webp" muted loop playsinline preload="none"></video><span class="tag">Quarto e penteadeira</span></div>
+    <div class="it"><video src="assets/videos/v5.mp4" poster="assets/videos/v5.webp" muted loop playsinline preload="none"></video><span class="tag">Detalhes e banheiro</span></div>
+    <div class="it"><video src="assets/videos/v6.mp4" poster="assets/videos/v6.webp" muted loop playsinline preload="none"></video><span class="tag">Cozinha com LED</span></div>
+    <div class="it"><video src="assets/videos/v7.mp4" poster="assets/videos/v7.webp" muted loop playsinline preload="none"></video><span class="tag">Closet e espelhos</span></div>
+  </div>
+  <div class="vc-ctrl">
+    <button class="ar" id="vprev" aria-label="Vídeo anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <div class="dots" id="vdots"></div>
+    <button class="ar" id="vnext" aria-label="Próximo vídeo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</section>
+
+<!-- 10 CEO -->
+<section class="light" id="thiago">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow rv">Quem assina cada projeto</span>
+      <h2 class="split">Thiago Dias</h2>
+      <div class="cota" aria-hidden="true"><i></i><b>fundador · CEO</b><i></i></div>
+    </div>
+    <div class="duo">
+      <figure class="img-rv"><img src="assets/thiago-dias.webp" alt="Thiago Dias, CEO da Dias Móveis Planejados" loading="lazy" width="1092" height="1365"></figure>
+      <div class="txt">
+        <span class="eyebrow rv">Trabalho, dedicação e confiança</span>
+        <h2 class="split">Um nome construído <em>projeto a projeto.</em></h2>
+        <div class="cota" aria-hidden="true"><i></i><b>confiança</b><i></i></div>
+        <p class="rv" style="--d:.2s">À frente da Dias Móveis Planejados, Thiago Dias conduz cada cliente pessoalmente — da primeira conversa até a entrega do ambiente pronto. É esse olhar de perto que garante que o projeto saia exatamente como foi sonhado.</p>
+        <blockquote class="quote rv" style="--d:.3s">“Cada detalhe pensado, cada acabamento feito com cuidado e, acima de tudo, o compromisso de entregar qualidade para cada cliente. É assim que construímos nosso nome: trabalho, dedicação e confiança.”<small>Thiago Dias</small></blockquote>
+      </div>
+    </div>
+    <div class="duo rev" style="margin-top:clamp(72px,9vw,120px)">
+      <div class="txt">
+        <span class="eyebrow rv">Excelência na execução</span>
+        <h2 class="split">Mão na obra, <em>olho no milímetro.</em></h2>
+        <div class="cota" aria-hidden="true"><i></i><b>precisão</b><i></i></div>
+        <p class="rv" style="--d:.2s">Excelência não fica só no projeto: ela acontece na hora do corte, do encaixe e do ajuste final. Thiago acompanha a execução de perto, garantindo cortes precisos, peças alinhadas e um acabamento que resiste ao tempo e ao uso.</p>
+        <ul class="ticks rv" style="--d:.3s"><li>Medição técnica feita no próprio ambiente</li><li>Ajustes finos executados na hora da montagem</li><li>Conferência de cada porta, gaveta e alinhamento</li></ul>
+        <div class="acts rv" style="--d:.4s"><a class="btn btn-p" data-wa="Olá, Thiago! Vim pelo site e quero conversar sobre meu projeto." href="#">Falar com o Thiago</a></div>
+      </div>
+      <figure class="img-rv"><img src="assets/thiago-trabalho.webp" alt="Thiago Dias ajustando um móvel com serra tico-tico durante a montagem" loading="lazy" width="1117" height="1396"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 11 PROCESSO -->
+<section class="dark" id="processo">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow rv">Como funciona</span>
+      <h2 class="split">Do primeiro contato <em>ao ambiente pronto.</em></h2>
+      <div class="cota" aria-hidden="true"><i></i><b>4 etapas</b><i></i></div>
+    </div>
+    <div class="steps rv">
+      <div class="step"><div class="b">1</div><h3>Conversa e medição</h3><p>Entendemos sua necessidade e medimos o ambiente com precisão.</p></div>
+      <div class="step"><div class="b">2</div><h3>Projeto em 3D</h3><p>Você visualiza cada detalhe e aprova antes de qualquer corte.</p></div>
+      <div class="step"><div class="b">3</div><h3>Fabricação</h3><p>Peças produzidas sob medida, com materiais de qualidade.</p></div>
+      <div class="step"><div class="b">4</div><h3>Montagem</h3><p>Instalação profissional e entrega com tudo ajustado.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 GOOGLE -->
+<section class="light alt">
+  <div class="wrap g5 rv">
+    <div class="big" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg></div>
+    <span class="eyebrow">Avaliação dos clientes</span>
+    <h2>5 estrelas <em>no Google.</em></h2>
+    <p class="lead" style="max-width:560px;margin-inline:auto">Quem já tem um ambiente Dias recomenda. Veja as avaliações reais de clientes de João Pessoa.</p>
+    <div class="center-act"><a class="btn btn-g" href="https://www.google.com/search?q=dias+m%C3%B3veis+planejados+jo%C3%A3o+pessoa&oq=dias+m%C3%B3veis+planejados+jo%C3%A3o+pessoa&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIICAEQABgWGB4yCAgCEAAYFhgeMgoIAxAAGIAEGKIEMgoIBBAAGIAEGKIEMgoIBRAAGIAEGKIEMgcIBhAAGO8FMgcIBxAAGO8F0gEINDExN2owajeoAgCwAgA&sourceid=chrome&source=chrome.ob&ie=UTF-8" target="_blank" rel="noopener">Ver avaliações no Google</a></div>
+  </div>
+</section>
+
+<!-- 13 CTA FINAL -->
+<section class="dark final" id="contato">
+  <div class="wrap" style="position:relative">
+    <img class="sym rv" src="assets/simbolo-light.png" alt="" aria-hidden="true">
+    <h2 class="split">Vamos transformar <em>seu espaço?</em></h2>
+    <div class="cota" aria-hidden="true"><i></i><b>seu projeto, do seu jeito</b><i></i></div>
+    <p class="lead rv" style="--d:.2s">Dê o primeiro passo para ter o ambiente que sempre desejou. Entre em contato com a Dias Móveis Planejados e solicite seu orçamento personalizado.</p>
+    <div class="acts rv" style="--d:.3s">
+      <a class="btn btn-p" data-wa="Olá, Dias Móveis! Quero meu orçamento personalizado." href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg>Quero meu orçamento</a>
+      <a class="btn btn-g" href="https://www.instagram.com/dias_moveisplanejadoos/" target="_blank" rel="noopener">Seguir no Instagram</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img class="lg" src="assets/logo-v-light.png" alt="Dias Móveis Planejados" loading="lazy">
+    <p class="slogan">Seu projeto, do seu jeito.</p>
+    <div class="soc">
+      <a href="https://www.instagram.com/dias_moveisplanejadoos/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".6" fill="currentColor"/></svg></a>
+      <a data-wa="Olá, Dias Móveis! Vim pelo site." href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg></a>
+    </div>
+    <div class="meta">
+      <span>📍 João Pessoa – PB e região</span>
+      <a data-wa="Olá, Dias Móveis! Vim pelo site." href="#">(83) 99935-4112</a>
+      <a href="https://www.instagram.com/dias_moveisplanejadoos/" target="_blank" rel="noopener">@dias_moveisplanejadoos</a>
+    </div>
+    <p class="copy">© <span id="yr"></span> Dias Móveis Planejados · CEO Thiago Dias · Móveis planejados em João Pessoa – PB</p>
+  </div>
+</footer>
+
+<a class="wpp" data-wa="Olá, Dias Móveis! Vim pelo site e quero solicitar um orçamento." href="#" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg></a>
+
+<div class="lbx" id="lbx" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <img alt="">
+  <button class="x" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button class="pv" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="nx" aria-label="Próxima foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
+
+<script>
+(()=>{
+const WA='5583999354112';
+document.querySelectorAll('[data-wa]').forEach(a=>{a.href='https://wa.me/'+WA+'?text='+encodeURIComponent(a.dataset.wa);a.target='_blank';a.rel='noopener'});
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* split de palavras para títulos */
+document.querySelectorAll('.split').forEach(el=>{
+  let i=0;
+  const walk=n=>{[...n.childNodes].forEach(c=>{
+    if(c.nodeType===3){
+      const f=document.createDocumentFragment();
+      c.textContent.split(/([ \t\n\r]+)/).forEach(t=>{
+        if(!t)return;
+        if(/^[ \t\n\r]+$/.test(t)){f.appendChild(document.createTextNode(' '));return}
+        const w=document.createElement('span');w.className='w';
+        const s=document.createElement('span');s.textContent=t;s.style.setProperty('--i',i++);
+        w.appendChild(s);f.appendChild(w);
+      });
+      c.replaceWith(f);
+    }else if(c.nodeType===1)walk(c);
+  })};
+  walk(el);
+});
+
+/* revelar ao rolar */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14,rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.rv,.split,.img-rv,.cota,.steps,.g5').forEach(el=>io.observe(el));
+/* hero imediato */
+requestAnimationFrame(()=>document.querySelectorAll('.hero .rv,.hero .split,.hero .img-rv').forEach(el=>el.classList.add('in')));
+
+/* header, progresso, menu ativo, botão flutuante */
+const hdr=document.getElementById('hdr'),bar=document.querySelector('.progress'),wpp=document.querySelector('.wpp');
+const links=[...document.querySelectorAll('.nav a')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+let tick=false;
+const onScroll=()=>{
+  const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+  hdr.classList.toggle('solid',y>40);
+  bar.style.transform='scaleX('+(h>0?y/h:0)+')';
+  wpp.classList.toggle('show',y>innerHeight*.6);
+  let cur=-1;secs.forEach((s,i)=>{if(s&&s.getBoundingClientRect().top<innerHeight*.4)cur=i});
+  links.forEach((a,i)=>a.classList.toggle('on',i===cur));
+  tick=false;
+};
+addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
+
+/* menu mobile */
+const burger=document.querySelector('.burger');
+const toggle=o=>{document.body.classList.toggle('menu-open',o);burger.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''};
+burger.addEventListener('click',()=>toggle(!document.body.classList.contains('menu-open')));
+document.querySelectorAll('.mnav a').forEach(a=>a.addEventListener('click',()=>toggle(false)));
+
+/* vídeos soltos: tocam só quando visíveis (sempre sem som) */
+const vio=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;v.muted=true;if(e.isIntersecting){v.play().catch(()=>{})}else v.pause()}),{threshold:.25});
+document.querySelectorAll('video[data-auto], .hero video').forEach(v=>vio.observe(v));
+
+/* lightbox do portfólio */
+const shots=[...document.querySelectorAll('.port button')],lbx=document.getElementById('lbx'),limg=lbx.querySelector('img');let li=0,lastF=null;
+const show=i=>{li=(i+shots.length)%shots.length;const im=shots[li].querySelector('img');limg.src=im.src;limg.alt=im.alt};
+shots.forEach((b,i)=>b.addEventListener('click',()=>{lastF=b;show(i);lbx.classList.add('open');document.body.style.overflow='hidden';lbx.querySelector('.x').focus()}));
+const close=()=>{lbx.classList.remove('open');document.body.style.overflow='';lastF&&lastF.focus()};
+lbx.querySelector('.x').onclick=close;lbx.querySelector('.pv').onclick=()=>show(li-1);lbx.querySelector('.nx').onclick=()=>show(li+1);
+lbx.addEventListener('click',e=>{if(e.target===lbx)close()});
+addEventListener('keydown',e=>{if(!lbx.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(li-1);if(e.key==='ArrowRight')show(li+1)});
+
+/* carrossel de vídeos — destaque no centro, sem som, autoplay */
+const vc=document.getElementById('vc'),items=[...vc.querySelectorAll('.it')],N=items.length,dots=document.getElementById('vdots');
+let act=0,vis=false,timer=null;
+items.forEach((_,i)=>{const d=document.createElement('button');d.setAttribute('aria-label','Vídeo '+(i+1));d.onclick=()=>go(i);dots.appendChild(d)});
+const render=()=>{
+  items.forEach((it,i)=>{
+    let o=i-act;if(o>N/2)o-=N;if(o<-N/2)o+=N;
+    const a=Math.abs(o);
+    it.style.setProperty('--o',o);
+    it.style.setProperty('--s',a===0?1:a===1?.82:.66);
+    it.style.setProperty('--op',a===0?1:a===1?.55:a===2?.25:0);
+    it.style.setProperty('--sat',a===0?1:.5);
+    it.style.setProperty('--br',a===0?1:.75);
+    it.style.setProperty('--z',10-a);
+    it.classList.toggle('act',a===0);
+    it.setAttribute('aria-hidden',a!==0);
+    const v=it.querySelector('video');v.muted=true;
+    if(vis&&a<=1){if(v.preload==='none')v.preload='auto';v.play().catch(()=>{})}else v.pause();
+  });
+  [...dots.children].forEach((d,i)=>d.classList.toggle('on',i===act));
+};
+const go=i=>{act=(i+N)%N;render();restart()};
+const restart=()=>{clearInterval(timer);if(vis&&!matchMedia('(prefers-reduced-motion: reduce)').matches)timer=setInterval(()=>go(act+1),7000)};
+items.forEach((it,i)=>it.addEventListener('click',()=>{if(i!==act)go(i)}));
+document.getElementById('vprev').onclick=()=>go(act-1);
+document.getElementById('vnext').onclick=()=>go(act+1);
+vc.addEventListener('mouseenter',()=>clearInterval(timer));vc.addEventListener('mouseleave',restart);
+let sx=null;
+vc.addEventListener('pointerdown',e=>{sx=e.clientX});
+vc.addEventListener('pointerup',e=>{if(sx===null)return;const dx=e.clientX-sx;if(Math.abs(dx)>40)go(act+(dx<0?1:-1));sx=null});
+new IntersectionObserver(es=>{vis=es[0].isIntersecting;render();restart()},{threshold:.2}).observe(vc);
+render();
+})();
+</script>
+</body>
+</html>
